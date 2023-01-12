@@ -1,7 +1,10 @@
+-f https://download.pytorch.org/whl/torch_stable.html
+
+
 streamlit==1.16.0
 streamlit-drawable-canvas==0.9.2
 numpy==1.24.1
 opencv-python-headless==4.7.0.68
-torch==1.13.1
-torchvision==0.14.1
+torch==1.13.1+cpu
+torchvision==0.14.1+cpu
 Pillow==9.4.0
