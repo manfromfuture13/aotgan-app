@@ -16,7 +16,6 @@ charset-normalizer==2.0.12
 click==8.0.4
 commonmark==0.9.1
 coremltools==6.1
-dataclasses==0.8
 decorator==5.1.1
 defusedxml==0.7.1
 entrypoints==0.4
