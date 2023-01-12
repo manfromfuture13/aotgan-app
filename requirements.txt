@@ -1,4 +1,4 @@
-streamlit_drawable_canvas
+streamlit-drawable-canvas==0.9.2
 opencv-python==4.5.1.48
 torch==1.8.1
 torchvision==0.9.1
