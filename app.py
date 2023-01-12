@@ -3,14 +3,14 @@ import streamlit as st
 from streamlit_drawable_canvas import st_canvas
 from torchvision.transforms import ToTensor
 import torch
-import numpy as np
 import os
 from torch.cuda.amp import autocast
-import cv2
 import importlib
 import numpy as np
 import argparse
 import model.aotgan as net
+import cv2
+
 
 
 # @st.cache
