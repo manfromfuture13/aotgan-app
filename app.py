@@ -4,7 +4,6 @@ from streamlit_drawable_canvas import st_canvas
 from torchvision.transforms import ToTensor
 import torch
 import os
-from torch.cuda.amp import autocast
 import importlib
 import numpy as np
 import argparse
@@ -92,3 +91,4 @@ if st.button("Predict"):
     result = infer(bg_image, binary_mask)
 
     st.image(result)
+    torch.cuda.empty_cache()
