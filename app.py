@@ -9,8 +9,6 @@ import importlib
 import numpy as np
 import argparse
 import model.aotgan as net
-import cv2
-
 
 
 # @st.cache
@@ -37,7 +35,10 @@ def postprocess(image):
 
 def infer(img, mask):
     with torch.no_grad():
-        img_cv = cv2.resize(np.array(img)[:, :, :3], (512, 512))  # Fixing everything to 512 x 512 for this demo.
+        img_cv = np.array(img)[:, :, :3]
+        img_cv = Image.fromarray(img_cv).resize((512,512))
+        im_cv = np.asarray(img_cv)
+        # Fixing everything to 512 x 512 for this demo.
         img_tensor = (ToTensor()(img_cv) * 2.0 - 1.0).unsqueeze(0)
         mask_tensor = (ToTensor()(mask)).unsqueeze(0)
         print(img_tensor.shape)
